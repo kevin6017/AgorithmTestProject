@@ -1,0 +1,102 @@
+[
+  {
+    "courseNumber": "ENG 103",
+    "courseTitle": "Rhetoric and Writing",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "ENG 104",
+    "courseTitle": "Composing Research",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "COMM 210",
+    "courseTitle": "Fundamentals of Public Comm",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "HIST 150",
+    "courseTitle": "The West in the World",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "FIN 101",
+    "courseTitle": "Pers Fin or Fiscal Wellness",
+    "creditHours": 1,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "PFW 1XX",
+    "courseTitle": "Physical Fitness/Wellness Credit",
+    "creditHours": 2,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "????? can be both muhi or art appreciaiton",
+    "courseTitle": "Fine Arts Credit",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "PHYC ???",
+    "courseTitle": "Natural Sciences Credit",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "HONR 297",
+    "courseTitle": "Natural Science Honors Course",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "HONR 201",
+    "courseTitle": "Inquiries in the Ancient World",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [ "" ]
+  },
+  {
+    "courseNumber": "HONR 202",
+    "courseTitle": "Inquires in the Middle Ages & 21st Century",
+    "creditHours":3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": [""]
+  }
+]
+/* Template for copypasta
+  {
+    "courseNumber":,
+    "courseTitle": ,
+    "creditHours":,
+    "fall":,
+    "spring": ,
+    "prerequisites": []
+  },
+
+
+*/

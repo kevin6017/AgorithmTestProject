@@ -1,0 +1,52 @@
+[
+
+  {
+    "Semester": "Fall",
+    "Position": 1,
+    "Classes": [ "ENG 103", "CS 120", "HIST 150", "MUHI 100" ]
+  },
+  {
+    "Semester": "Spring",
+    "Position": 2,
+    "Classes": [ "ENG 104", "CS 121", "HONR 201", "HONR 189", "CS 124" ]
+  },
+  {
+    "Semester": "Fall",
+    "Position": 3,
+    "Classes": [ "CS 222", "CS 230", "HONR 199", "HONR 202", "COMM 210" ]
+  },
+  {
+    "Semester": "Spring",
+    "Position": 4,
+    "Classes": [ "CS 224", "CS 239", "CS 346", "HONR 203" ]
+  },
+  {
+    "Semester": "Fall",
+    "Position": 5,
+    "Classes": [ "CS 327", "CS 335", "CS 376", "PFW 100" ]
+  },
+  {
+    "Semester": "Spring",
+    "Position": 6,
+    "Classes": [ "CS 380", "CS 3XX", "CS 4XX", "WPP 390" ]
+  },
+  {
+    "Semester": "Fall",
+    "Position": 7,
+    "Classes": [ "CS 310", "CS 495", "CS 3XX", "HONR 297" ]
+  },
+  {
+    "Semester": "Spring",
+    "Position": 8,
+    "Classes": ["CS 498", "CS 4XX"]
+  }
+
+  /*
+    {
+    "Semester": ,
+    "Position": ,
+    "Classes": []
+  },
+   */
+]
+
