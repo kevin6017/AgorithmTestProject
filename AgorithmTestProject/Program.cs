@@ -10,6 +10,13 @@ namespace AgorithmTestProject
     {
         static void Main(string[] args)
         {
+            var classList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json");
+            makeSemesters(classList);
+        }
+
+        static void makeSemesters(List<Course> classList)
+        {
+
         }
     }
 }
