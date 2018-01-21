@@ -5,35 +5,60 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AgorithmTestProject
-{   
+{
+    
     class Program
     {
-        static void Main(string[] args)
+        HashSet<string> prSet = new HashSet<string>();
+        dynamic classList;
+        //assign this to remaining class after filter method is written
+        dynamic remainingClassList;
+        void Main(string[] args)
         {
-            dynamic classList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json");
+            classList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json");
             foreach(Course course in classList)
             {
-                course.Priority = 0;
+                course.Priority = "";
             }
-            Console.WriteLine(classList[0].Priority);
             makeSemesters(classList);
         }
 
-        static void makeSemesters(List<Course> classList)
+        void makeSemesters(List<Course> classList)
         {
-            buildPrereqList(classList);
+            //remove this when remaining classes are actually filtered
+            remainingClassList = classList;
+            //-----------------------------------
+
+            buildPrereqList(remainingClassList);
+            prioritizeClasses(remainingClassList);
         }
 
         //Need to filter remaining classes still
-        static void buildPrereqList(List<Course> remainingClassList)
+        void buildPrereqList(List<Course> remainingClassList)
         {
-            HashSet<String> prSet = new HashSet<String>();
+            
             foreach(Course course in remainingClassList)
             {
                 foreach(String prereq in course.prerequisites)
                 {
                     prSet.Add(prereq);
                 }
+            }
+        }
+
+        void prioritizeClasses(List<Course> remainingClassList)
+        {
+            foreach(Course course in remainingClassList)
+            {
+                givePriorityToPrereqs(course);
+            }
+        }
+
+        void givePriorityToPrereqs(Course currentCourse)
+        {
+            if(currentCourse.prerequisites != null)
+            {
+                //prioritize shit
             }
         }
     }

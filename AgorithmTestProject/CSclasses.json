@@ -1,7 +1,7 @@
 [
 
   {
-    "courseNumber": "CS 120",
+    "courseNumber": "CS120",
     "courseTitle": "Computer Science 1",
     "creditHours": 4,
     "fall": true,
@@ -9,132 +9,132 @@
     "prerequisites": [ "Basic Math" ]
   },
   {
-    "courseNumber": "CS 121",
+    "courseNumber": "CS121",
     "courseTitle": "Computer Science 2",
     "creditHours": 4,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 120" ]
+    "prerequisites": [ "CS120" ]
   },
   {
-    "courseNumber": "CS 222",
+    "courseNumber": "CS222",
     "courseTitle": "Advanced Programming",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 121", "Discrete Math" ]
+    "prerequisites": [ "CS121", "Discrete Math" ]
   },
   {
-    "courseNumber": "CS 224",
+    "courseNumber": "CS224",
     "courseTitle": "Design/Analysis of Algorithms",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 121", "Discrete Math" ]
+    "prerequisites": [ "CS121", "Discrete Math" ]
   },
   {
-    "courseNumber": "CS 230",
+    "courseNumber": "CS230",
     "courseTitle": "Computer Organization and Architecture",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 121", "Discrete Math" ]
+    "prerequisites": [ "CS121", "Discrete Math" ]
   },
   {
-    "courseNumber": "CS 239",
+    "courseNumber": "CS239",
     "courseTitle": "Social and Professional Issues",
     "creditHours": 1,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 222" ]
+    "prerequisites": [ "CS222" ]
   },
   {
-    "courseNumber": "CS 3XX",
+    "courseNumber": "CS3XX",
     "courseTitle": "Elective Placeholder 1",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 121" ]
+    "prerequisites": [ "CS121" ]
   },
   {
-    "courseNumber": "CS 3XY",
+    "courseNumber": "CS3XY",
     "courseTitle": "Elective Placeholder 2",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 121", "CS 222" ]
+    "prerequisites": [ "CS121", "CS 222" ]
   },
   {
-    "courseNumber": "CS 327",
+    "courseNumber": "CS327",
     "courseTitle": "Distributed Processing and Networks",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 224" ]
+    "prerequisites": [ "CS224" ]
   },
   {
-    "courseNumber": "CS 335",
+    "courseNumber": "CS335",
     "courseTitle": "Programming Languages",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 222", "CS 230" ]
+    "prerequisites": [ "CS222", "CS230" ]
   },
   {
-    "courseNumber": "CS 346",
+    "courseNumber": "CS346",
     "courseTitle": "Database Design",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 222" ]
+    "prerequisites": [ "CS222" ]
   },
   {
-    "courseNumber": "CS 376",
+    "courseNumber": "CS376",
     "courseTitle": "Operating Systems",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 222", "CS 230" ]
+    "prerequisites": [ "CS222", "CS230" ]
   },
   {
-    "courseNumber": "CS 380",
+    "courseNumber": "CS380",
     "courseTitle": "Theory of Computation 1",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 224" ]
+    "prerequisites": [ "CS224" ]
   },
   {
-    "courseNumber": "CS 4XX",
+    "courseNumber": "CS4XX",
     "courseTitle": "Elective Placeholder 3",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 121", "CS 222" ]
+    "prerequisites": [ "CS121", "CS222" ]
   },
   {
-    "courseNumber": "CS 4XY",
+    "courseNumber": "CS4XY",
     "courseTitle": "Elective Placeholder 4",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS 121", "CS 222" ]
+    "prerequisites": [ "CS121", "CS222" ]
   },
   {
-    "courseNumber": "CS 495",
+    "courseNumber": "CS495",
     "courseTitle": "Software Engineering 1",
     "creditHours": 3,
     "fall": true,
     "spring": false,
-    "prerequisites": [ "CS 222", "COMM 210" ]
+    "prerequisites": [ "CS222", "COMM210" ]
   },
   {
-    "courseNumber": "CS 498",
+    "courseNumber": "CS498",
     "courseTitle": "Software Engineering 2",
     "creditHours": 3,
     "fall": false,
     "spring": true,
-    "prerequisites": [ "CS 495" ]
+    "prerequisites": [ "CS495" ]
   }
 ]
 /* Template for copypasta
