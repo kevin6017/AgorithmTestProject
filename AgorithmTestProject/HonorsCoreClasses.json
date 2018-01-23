@@ -1,91 +1,91 @@
 [
   {
-    "courseNumber": "ENG 103",
+    "courseNumber": "ENG103",
     "courseTitle": "Rhetoric and Writing",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [  ]
   },
   {
-    "courseNumber": "ENG 104",
+    "courseNumber": "ENG104",
     "courseTitle": "Composing Research",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [  ]
   },
   {
-    "courseNumber": "COMM 210",
+    "courseNumber": "COMM210",
     "courseTitle": "Fundamentals of Public Comm",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [  ]
   },
   {
-    "courseNumber": "HIST 150",
+    "courseNumber": "HIST150",
     "courseTitle": "The West in the World",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [  ]
   },
   {
-    "courseNumber": "FIN 101",
+    "courseNumber": "FIN101",
     "courseTitle": "Pers Fin or Fiscal Wellness",
     "creditHours": 1,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [  ]
   },
   {
-    "courseNumber": "PFW 1XX",
+    "courseNumber": "PFW1XX",
     "courseTitle": "Physical Fitness/Wellness Credit",
     "creditHours": 2,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [  ]
   },
   {
-    "courseNumber": "????? can be both muhi or art appreciaiton",
+    "courseNumber": "FineArts",
     "courseTitle": "Fine Arts Credit",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [ ]
   },
   {
-    "courseNumber": "PHYC ???",
+    "courseNumber": "PHYC???",
     "courseTitle": "Natural Sciences Credit",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [ ]
   },
   {
-    "courseNumber": "HONR 297",
+    "courseNumber": "HONR297",
     "courseTitle": "Natural Science Honors Course",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [ ]
   },
   {
-    "courseNumber": "HONR 201",
+    "courseNumber": "HONR201",
     "courseTitle": "Inquiries in the Ancient World",
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "" ]
+    "prerequisites": [  ]
   },
   {
-    "courseNumber": "HONR 202",
+    "courseNumber": "HONR202",
     "courseTitle": "Inquires in the Middle Ages & 21st Century",
     "creditHours":3,
     "fall": true,
     "spring": true,
-    "prerequisites": [""]
+    "prerequisites": []
   }
 ]
 /* Template for copypasta

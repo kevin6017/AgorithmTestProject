@@ -6,7 +6,7 @@
     "creditHours": 4,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "Basic Math" ]
+    "prerequisites": [ "BasicMath" ]
   },
   {
     "courseNumber": "CS121",
@@ -22,7 +22,7 @@
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS121", "Discrete Math" ]
+    "prerequisites": [ "CS121", "DiscreteMath" ]
   },
   {
     "courseNumber": "CS224",
@@ -30,7 +30,7 @@
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS121", "Discrete Math" ]
+    "prerequisites": [ "CS121", "DiscreteMath" ]
   },
   {
     "courseNumber": "CS230",
@@ -38,7 +38,7 @@
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS121", "Discrete Math" ]
+    "prerequisites": [ "CS121", "DiscreteMath" ]
   },
   {
     "courseNumber": "CS239",
@@ -62,7 +62,7 @@
     "creditHours": 3,
     "fall": true,
     "spring": true,
-    "prerequisites": [ "CS121", "CS 222" ]
+    "prerequisites": [ "CS121", "CS222" ]
   },
   {
     "courseNumber": "CS327",
@@ -135,6 +135,22 @@
     "fall": false,
     "spring": true,
     "prerequisites": [ "CS495" ]
+  },
+  {
+    "courseNumber": "BasicMath",
+    "courseTitle": "Math 111, Math 112, Math 132, Math 136, Math 161, Math 165",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": []
+  },
+  {
+    "courseNumber": "DiscreteMath",
+    "courseTitle": "CS124, Math 215",
+    "creditHours": 3,
+    "fall": true,
+    "spring": true,
+    "prerequisites": []
   }
 ]
 /* Template for copypasta
