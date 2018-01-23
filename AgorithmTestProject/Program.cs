@@ -9,30 +9,63 @@ namespace AgorithmTestProject
     
     class Program
     {
-        HashSet<string> prSet = new HashSet<string>();
-        dynamic classList;
+        //HashSet<Course> prSet = new HashSet<Course>();
+        //List<Course> classList;
         //assign this to remaining class after filter method is written
-        dynamic remainingClassList;
+        //List<Course> remainingClassList;
+
+        static void Main(string[] args)
+        {
+            
+            List<Course> classList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json"); //might be passed in at a future time
+            //will need to have HonorsCoreClasses/UCore added to it
+            HashSet<Course> prereqSet = new HashSet<Course>();
+            //remove this when remaining classes are actually filtered
+            List<Course> remainingClassList = classList;
+            //-----------------------------------
+
+            //set initial to nothing, might want to make this a method
+            foreach (Course course in classList)
+            {
+                course.Priority = "";
+            }
+            printClassInfo(classList[0]);
+
+            prereqSet = buildPrereqList(remainingClassList);
+
+
+            Console.ReadLine();
+        }
+
+        static HashSet<Course> buildPrereqList(List<Course> remainingClassList)
+        {
+            HashSet<Course> constructionSet = new HashSet<Course>();
+            foreach (Course course in remainingClassList)
+            {
+                foreach (String prereq in course.prerequisites)
+                {
+                    constructionSet.Add(remainingClassList.Find(targetCourse => targetCourse.courseNumber == prereq));
+                }
+            }
+            return constructionSet;
+        }
+
+        static void printClassInfo(Course currentCourse)
+        {
+            string output = "Course Number: " + currentCourse.courseNumber + "  Course Title: " + currentCourse.courseTitle + "  Credit Hours: " + currentCourse.creditHours;
+            Console.WriteLine(output);
+        }
+        //---------------------------------------------------------------------------------
+        /*
         void Main(string[] args)
         {
-            classList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json");
+            List<Course> classList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json");
             foreach(Course course in classList)
             {
                 course.Priority = "";
             }
             makeSemesters(classList);
         }
-
-        void makeSemesters(List<Course> classList)
-        {
-            //remove this when remaining classes are actually filtered
-            remainingClassList = classList;
-            //-----------------------------------
-
-            buildPrereqList(remainingClassList);
-            prioritizeClasses(remainingClassList);
-        }
-
         //Need to filter remaining classes still
         void buildPrereqList(List<Course> remainingClassList)
         {
@@ -41,10 +74,23 @@ namespace AgorithmTestProject
             {
                 foreach(String prereq in course.prerequisites)
                 {
-                    prSet.Add(prereq);
+                    prSet.Add(remainingClassList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
             }
         }
+        */
+
+        void makeSemesters(List<Course> classList)
+        {
+            //remove this when remaining classes are actually filtered
+            List<Course> remainingClassList = classList;
+            //-----------------------------------
+
+            buildPrereqList(remainingClassList);
+            prioritizeClasses(remainingClassList);
+        }
+
+        
 
         void prioritizeClasses(List<Course> remainingClassList)
         {

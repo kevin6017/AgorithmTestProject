@@ -23,5 +23,6 @@ namespace AgorithmTestProject
         public string courseDescription { get; set; }
 
         public string Priority { get; internal set; }
+
     }
 }
