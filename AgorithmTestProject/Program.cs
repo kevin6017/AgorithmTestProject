@@ -10,15 +10,15 @@ namespace AgorithmTestProject
     class Program
     {
         //HashSet<Course> prSet = new HashSet<Course>();
-        //List<Course> classList;
+        //List<Course> courseList;
         //assign this to remaining class after filter method is written
-        //List<Course> remainingClassList;
+        //List<Course> remainingCourseList;
 
         static class globalVars
         {
             public static HashSet<Course> prSet;
-            public static List<Course> classList;
-            public static List<Course> remainingClassList;
+            public static List<Course> courseList;
+            public static List<Course> remainingCourseList;
         }
 
         static void Main(string[] args)
@@ -30,7 +30,7 @@ namespace AgorithmTestProject
             //will need to have HonorsCoreClasses/UCore added to it
             globalVars.prSet = new HashSet<Course>();
             //remove this when remaining classes are actually filtered
-            globalVars.remainingClassList = courseList;
+            globalVars.remainingCourseList = courseList;
             //-----------------------------------
 
             //set initial to nothing, might want to make this a method
@@ -44,7 +44,7 @@ namespace AgorithmTestProject
 
             prioritizeClasses();
 
-            printClassInfo(globalVars.remainingClassList[globalVars.remainingClassList.Count() - 1]);
+            printClassInfo(globalVars.remainingCourseList[globalVars.remainingCourseList.Count() - 1]);
 
 
             Console.ReadLine();
@@ -53,18 +53,18 @@ namespace AgorithmTestProject
         static void buildPrereqList()
         {
             HashSet<Course> constructionSet = new HashSet<Course>();
-            foreach (Course course in globalVars.remainingClassList)
+            foreach (Course course in globalVars.remainingCourseList)
             {
                 foreach (String prereq in course.prerequisites)
                 {
-                    constructionSet.Add(globalVars.remainingClassList.Find(targetCourse => targetCourse.courseNumber == prereq));
+                    constructionSet.Add(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
             }
         }
         /*
         static void findZeroPriorityCourses()
         {
-            foreach (Course currentCourse in globalVars.remainingClassList)
+            foreach (Course currentCourse in globalVars.remainingCourseList)
             {
                 if (!globalVars.prSet.Contains(currentCourse))
                 {
@@ -75,7 +75,7 @@ namespace AgorithmTestProject
 
         static void prioritizeClasses()
         {
-            foreach(Course course in globalVars.remainingClassList)
+            foreach(Course course in globalVars.remainingCourseList)
             {
                 assignPriorityToPrereqs(course);
             }
@@ -87,8 +87,8 @@ namespace AgorithmTestProject
             {
                 foreach (String prereq in course.prerequisites)
                 {
-                    globalVars.remainingClassList.Find(targetCourse => targetCourse.courseNumber == prereq).priority++;
-                    assignPriorityToPrereqs(globalVars.remainingClassList.Find(targetCourse => targetCourse.courseNumber == prereq));
+                    globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority++;
+                    assignPriorityToPrereqs(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
             }  
         }
@@ -102,42 +102,42 @@ namespace AgorithmTestProject
         /*
         void Main(string[] args)
         {
-            List<Course> classList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json");
-            foreach(Course course in classList)
+            List<Course> courseList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json");
+            foreach(Course course in courseList)
             {
                 course.Priority = "";
             }
-            makeSemesters(classList);
+            makeSemesters(courseList);
         }
         //Need to filter remaining classes still
-        void buildPrereqList(List<Course> remainingClassList)
+        void buildPrereqList(List<Course> remainingCourseList)
         {
             
-            foreach(Course course in remainingClassList)
+            foreach(Course course in remainingCourseList)
             {
                 foreach(String prereq in course.prerequisites)
                 {
-                    prSet.Add(remainingClassList.Find(targetCourse => targetCourse.courseNumber == prereq));
+                    prSet.Add(remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
             }
         }
 
 
-        void makeSemesters(List<Course> classList)
+        void makeSemesters(List<Course> courseList)
         {
             //remove this when remaining classes are actually filtered
-            List<Course> remainingClassList = classList;
+            List<Course> remainingCourseList = courseList;
             //-----------------------------------
 
-            buildPrereqList(remainingClassList);
-            prioritizeClasses(remainingClassList);
+            buildPrereqList(remainingCourseList);
+            prioritizeClasses(remainingCourseList);
         }
 
         
 
-        void prioritizeClasses(List<Course> remainingClassList)
+        void prioritizeClasses(List<Course> remainingCourseList)
         {
-            foreach(Course course in remainingClassList)
+            foreach(Course course in remainingCourseList)
             {
                 givePriorityToPrereqs(course);
             }
