@@ -12,7 +12,7 @@ namespace AgorithmTestProject
 
         public string courseTitle { get; set; }
 
-        public string creditHours { get; set; }
+        public int creditHours { get; set; }
 
         public bool fall { get; set; }
         public bool spring { get; set; }

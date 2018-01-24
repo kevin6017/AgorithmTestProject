@@ -13,5 +13,7 @@ namespace AgorithmTestProject
         public int position { get; set; }
 
         public string[] classes { get; set; }
+
+        public int totalCreditHours { get; internal set; }
     }
 }
