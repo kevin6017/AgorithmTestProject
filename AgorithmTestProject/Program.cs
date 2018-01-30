@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +15,7 @@ namespace AgorithmTestProject
             public static HashSet<Course> prSet;
             public static List<Course> courseList;
             public static List<Course> remainingCourseList;
+            public static List<Semester> semesterList = new List<Semester>();
         }
 
         static void Main(string[] args)
@@ -47,6 +47,13 @@ namespace AgorithmTestProject
                 printClassInfo(course);
             }
 
+            buildSemesterList();
+
+            foreach(Semester sem in globalVars.semesterList)
+            {
+                Console.WriteLine(sem);
+            }
+
             Console.ReadLine();
         }
 
@@ -55,7 +62,7 @@ namespace AgorithmTestProject
             HashSet<Course> constructionSet = new HashSet<Course>();
             foreach (Course course in globalVars.remainingCourseList)
             {
-                foreach (string prereq in course.prerequisites)
+                foreach (String prereq in course.prerequisites)
                 {
                     constructionSet.Add(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
@@ -88,11 +95,58 @@ namespace AgorithmTestProject
             Console.WriteLine(output);
         }
 
-        static List<Course> getPrereqs(string course)
+        //Semester list courses must be in the form of strings
+        static void buildSemesterList()
         {
-            List<Course> list = new List<Course>();
-            list.Add(globalVars.courseList.Find(targetCourse => targetCourse.courseNumber == course));
-            return list;
+            //Assign according to user input
+            int semestersToGo = 5;
+            int totalCreditsToGo = findTotalCredits();
+            int targetHours = totalCreditsToGo / semestersToGo;
+            List<string> classList = new List<string>();
+
+            while(globalVars.remainingCourseList.Count > 0)
+            {
+                Semester currentSemester = new Semester();
+                currentSemester.totalCreditHours = 0;
+                int currentClassIndex = 0;
+                classList = new List<string>();
+
+                while (currentSemester.totalCreditHours < targetHours && currentClassIndex < globalVars.remainingCourseList.Count){
+                    if (clearsChecks(globalVars.remainingCourseList[currentClassIndex]))
+                    {
+                        classList.Add(globalVars.remainingCourseList[currentClassIndex].courseNumber);
+                        currentSemester.totalCreditHours += globalVars.remainingCourseList[currentClassIndex].creditHours;
+                        globalVars.remainingCourseList.RemoveAt(currentClassIndex);
+                    }
+                    else
+                    {
+                        currentClassIndex += 1;
+                        if(currentClassIndex > globalVars.remainingCourseList.Count)
+                        {
+                            break;
+                        }
+                    }
+                }
+                //must use this to build the array of strings required by semester.cs
+                currentSemester.classes = classList.ToArray();
+                globalVars.semesterList.Add(currentSemester);
+            }
+        }
+
+        static bool clearsChecks(Course currentCourse)
+        {
+            //fill with checks
+            return true;
+        }
+
+        static int findTotalCredits()
+        {
+            int creditCounter = 0;
+            foreach(Course course in globalVars.remainingCourseList)
+            {
+                creditCounter += course.creditHours;
+            }
+            return creditCounter;
         }
     }
 }
