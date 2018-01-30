@@ -33,8 +33,7 @@ namespace AgorithmTestProject
             //set initial to nothing, might want to make this a method
             foreach (Course course in courseList)
             {
-
-                course.priority = new int[3] { 0, 0, 0 };
+                initializePriorityField(course);               
             }
 
             buildPrereqList();
@@ -58,6 +57,11 @@ namespace AgorithmTestProject
             }
 
             Console.ReadLine();
+        }
+
+        static void initializePriorityField(Course course)
+        {
+            course.priority = new int[3] { 0, 0, 0 };
         }
 
         static void buildPrereqList()
