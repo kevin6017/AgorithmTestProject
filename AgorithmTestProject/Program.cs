@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,7 +55,7 @@ namespace AgorithmTestProject
             HashSet<Course> constructionSet = new HashSet<Course>();
             foreach (Course course in globalVars.remainingCourseList)
             {
-                foreach (String prereq in course.prerequisites)
+                foreach (string prereq in course.prerequisites)
                 {
                     constructionSet.Add(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
@@ -85,6 +86,13 @@ namespace AgorithmTestProject
         {
             string output = "Course Number: " + currentCourse.courseNumber + "  Course Title: " + currentCourse.courseTitle + "  Priority: " + currentCourse.priority + "  Credit Hours: " + currentCourse.creditHours;
             Console.WriteLine(output);
+        }
+
+        static List<Course> getPrereqs(string course)
+        {
+            List<Course> list = new List<Course>();
+            list.Add(globalVars.courseList.Find(targetCourse => targetCourse.courseNumber == course));
+            return list;
         }
     }
 }
