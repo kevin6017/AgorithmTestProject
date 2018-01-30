@@ -42,7 +42,9 @@ namespace AgorithmTestProject
 
             prioritizeCoursesStartingWithZeroPriority();
 
-            printClassInfo(globalVars.remainingCourseList[globalVars.remainingCourseList.Count() - 1]);
+            assignClassDependencyNum(globalVars.remainingCourseList);
+
+            //printClassInfo(globalVars.remainingCourseList[globalVars.remainingCourseList.Count() - 1]);
 
             foreach(Course course in globalVars.remainingCourseList.OrderBy(x => x.priority[0]))
             {
@@ -61,7 +63,10 @@ namespace AgorithmTestProject
 
         static void initializePriorityField(Course course)
         {
-            course.priority = new int[3] { 0, 0, 0 };
+            int standardPriority = 0;
+            int semesterOfferingPriority = (course.fall && course.spring ?  0 :  1);
+            int courseDependenciesPriority = 1;
+            course.priority = new int[3] {standardPriority, semesterOfferingPriority, courseDependenciesPriority };
         }
 
         static void buildPrereqList()
@@ -113,9 +118,22 @@ namespace AgorithmTestProject
             }  
         }
 
+        static void assignClassDependencyNum(List<Course> classList)
+        {        
+            classList = classList.OrderBy(x => x.priority[0]).ToList();
+            foreach (Course course in classList)
+            {
+                foreach (String prereq in course.prerequisites)
+                { 
+                    globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority[2] += course.priority[2];
+                }
+            }
+        }
+
         static void printClassInfo(Course currentCourse)
         {
-            string output = "Course Number: " + currentCourse.courseNumber + "  Course Title: " + currentCourse.courseTitle + "  Priority: " + currentCourse.priority[0] + "  Credit Hours: " + currentCourse.creditHours;
+            //+ "  Course Title: " + currentCourse.courseTitle 
+            string output = "Course Number: " + currentCourse.courseNumber + "  Priority: " + currentCourse.priority[0] + " Single Semester Offering: " + currentCourse.priority[1] + "# of Courses w/ Dependency: " + currentCourse.priority[2] + " Credit Hours: " + currentCourse.creditHours;
             Console.WriteLine(output);
         }
 
