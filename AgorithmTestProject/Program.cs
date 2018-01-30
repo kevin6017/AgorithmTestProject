@@ -38,7 +38,9 @@ namespace AgorithmTestProject
 
             buildPrereqList();
 
-            prioritizeClasses();
+            //prioritizeClasses();
+
+            prioritizeCoursesStartingWithZeroPriority();
 
             printClassInfo(globalVars.remainingCourseList[globalVars.remainingCourseList.Count() - 1]);
 
@@ -67,13 +69,27 @@ namespace AgorithmTestProject
                     constructionSet.Add(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
             }
+            globalVars.prSet = constructionSet;
         }
 
+        /*
         static void prioritizeClasses()
         {
             foreach(Course course in globalVars.remainingCourseList)
             {
                 assignPriorityToPrereqs(course);
+            }
+        }
+        */
+
+        static void prioritizeCoursesStartingWithZeroPriority()
+        {
+            foreach(Course course in globalVars.remainingCourseList)
+            {
+                if (!globalVars.prSet.Contains(course))
+                {
+                    assignPriorityToPrereqs(course);
+                }
             }
         }
 
@@ -82,8 +98,11 @@ namespace AgorithmTestProject
             if (course.prerequisites.Length > 0)
             {
                 foreach (String prereq in course.prerequisites)
-                {
-                    globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority++;
+                {//we should really find a way to shallow copy this instead of saerch the list 3 times
+                    if (globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority <= course.priority)
+                    {
+                        globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority++;
+                    }
                     assignPriorityToPrereqs(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
             }  
