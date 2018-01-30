@@ -33,7 +33,8 @@ namespace AgorithmTestProject
             //set initial to nothing, might want to make this a method
             foreach (Course course in courseList)
             {
-                course.priority = 0;
+
+                course.priority = new int[3] { 0, 0, 0 };
             }
 
             buildPrereqList();
@@ -44,7 +45,7 @@ namespace AgorithmTestProject
 
             printClassInfo(globalVars.remainingCourseList[globalVars.remainingCourseList.Count() - 1]);
 
-            foreach(Course course in globalVars.remainingCourseList.OrderBy(x => x.priority))
+            foreach(Course course in globalVars.remainingCourseList.OrderBy(x => x.priority[0]))
             {
                 printClassInfo(course);
             }
@@ -99,9 +100,9 @@ namespace AgorithmTestProject
             {
                 foreach (String prereq in course.prerequisites)
                 {//we should really find a way to shallow copy this instead of saerch the list 3 times
-                    if (globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority <= course.priority)
+                    if (globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority[0] <= course.priority[0])
                     {
-                        globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority++;
+                        globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq).priority[0]++;
                     }
                     assignPriorityToPrereqs(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
@@ -110,7 +111,7 @@ namespace AgorithmTestProject
 
         static void printClassInfo(Course currentCourse)
         {
-            string output = "Course Number: " + currentCourse.courseNumber + "  Course Title: " + currentCourse.courseTitle + "  Priority: " + currentCourse.priority + "  Credit Hours: " + currentCourse.creditHours;
+            string output = "Course Number: " + currentCourse.courseNumber + "  Course Title: " + currentCourse.courseTitle + "  Priority: " + currentCourse.priority[0] + "  Credit Hours: " + currentCourse.creditHours;
             Console.WriteLine(output);
         }
 

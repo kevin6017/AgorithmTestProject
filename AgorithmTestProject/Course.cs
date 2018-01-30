@@ -22,7 +22,7 @@ namespace AgorithmTestProject
 
         public string courseDescription { get; set; }
 
-        public int priority { get; internal set; }
+        public int[] priority { get; internal set; }
 
     }
 }
