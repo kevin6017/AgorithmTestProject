@@ -8,7 +8,7 @@ namespace AgorithmTestProject
 {
     class Semester
     {
-        public String semester { get; set; }
+        public string semester { get; set; }
 
         public int position { get; set; }
 

@@ -71,15 +71,13 @@ namespace AgorithmTestProject
 
         static void buildPrereqList()
         {
-            HashSet<Course> constructionSet = new HashSet<Course>();
             foreach (Course course in globalVars.remainingCourseList)
             {
                 foreach (String prereq in course.prerequisites)
                 {
-                    constructionSet.Add(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
+                    globalVars.prSet.Add(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
             }
-            globalVars.prSet = constructionSet;
         }
 
         /*
