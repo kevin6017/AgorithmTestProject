@@ -17,6 +17,8 @@ namespace AgorithmTestProject
 
 
         public List<Course> prerequisites { get; set; }
+        public int[] priority { get; internal set; }
+
         /*public string courseNumber { get; set; }
 
         public string courseTitle { get; set; }

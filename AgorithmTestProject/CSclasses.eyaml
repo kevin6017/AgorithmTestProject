@@ -63,7 +63,7 @@
     - *CS121
     - *DiscreteMath
 - &CS239
-  courseNumber: "CS2320"
+  courseNumber: "CS239"
   courseTitle: "Social and Professional Issues"
   creditHours: 1
   fall: true
