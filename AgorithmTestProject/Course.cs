@@ -8,7 +8,16 @@ namespace AgorithmTestProject
 {
     class Course
     {
+
         public string courseNumber { get; set; }
+        public string courseTitle { get; set; }
+        public int creditHours { get; set; }
+        public bool fall { get; set; }
+        public bool spring { get; set; }
+
+
+        public List<Course> prerequisites { get; set; }
+        /*public string courseNumber { get; set; }
 
         public string courseTitle { get; set; }
 
@@ -22,7 +31,7 @@ namespace AgorithmTestProject
 
         public string courseDescription { get; set; }
 
-        public int[] priority { get; internal set; }
+        public int[] priority { get; internal set; }*/
 
     }
 }

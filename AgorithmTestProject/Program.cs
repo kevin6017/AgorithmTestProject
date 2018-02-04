@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace AgorithmTestProject
 {
@@ -19,6 +22,12 @@ namespace AgorithmTestProject
         }
 
         static void Main(string[] args)
+        {
+            var ds = new DeserializerBuilder().WithNamingConvention(new CamelCaseNamingConvention()).Build();
+            globalVars.courseList = ds.Deserialize<List<Course>>(File.OpenText("..\\..\\CSclasses.eyaml"));
+        }
+
+        /*static void Main(string[] args)
         {
 
             List<Course> courseList = new JsonLoader().loadCourseList("..\\..\\CSclasses.json"); //might be passed in at a future time
@@ -78,7 +87,7 @@ namespace AgorithmTestProject
                     globalVars.prSet.Add(globalVars.remainingCourseList.Find(targetCourse => targetCourse.courseNumber == prereq));
                 }
             }
-        }
+        }*/
 
         /*
         static void prioritizeClasses()
@@ -89,7 +98,7 @@ namespace AgorithmTestProject
             }
         }
         */
-
+        /*
         static void prioritizeCoursesStartingWithZeroPriority()
         {
             foreach(Course course in globalVars.remainingCourseList)
@@ -187,6 +196,6 @@ namespace AgorithmTestProject
                 creditCounter += course.creditHours;
             }
             return creditCounter;
-        }
+        }*/
     }
 }

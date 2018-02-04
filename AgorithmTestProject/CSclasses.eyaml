@@ -1,0 +1,165 @@
+- &COMM210
+  courseNumber: "COMM210"
+  courseTitle: "Fundamentals of Public Communication"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &BasicMath
+  courseNumber: "BasicMath"
+  courseTitle: "Math 111, Math 112, Math 132, Math 136, Math 161, Math 165"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &CS120
+  courseNumber: "CS120"
+  courseTitle: "Computer Science 1"
+  creditHours: 4
+  fall: true
+  spring: true
+  prerequisites:
+    - *BasicMath
+- &DiscreteMath
+  courseNumber: "DiscreteMath"
+  courseTitle: "CS124 or Math 215"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &CS121
+  courseNumber: "CS121"
+  courseTitle: "Computer Science 2"
+  creditHours: 4
+  fall: true
+  spring: true
+  prerequisites:
+    - *CS120
+- &CS222
+  courseNumber: "CS222"
+  courseTitle: "Advanced Programming"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *CS121
+    - *DiscreteMath
+- &CS224
+  courseNumber: "CS224"
+  courseTitle: "Design/Analysis of Algorithms"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *CS121
+    - *DiscreteMath
+- &CS230
+  courseNumber: "CS230"
+  courseTitle: "Computer Organization and Architecture"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: 
+    - *CS121
+    - *DiscreteMath
+- &CS239
+  courseNumber: "CS2320"
+  courseTitle: "Social and Professional Issues"
+  creditHours: 1
+  fall: true
+  spring: true
+  prerequisites:
+    - *CS222
+- &CS3XX
+  courseNumber: "CS3XX"
+  courseTitle: "Elective Placeholder 1: requires CS121"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: 
+    - *CS121
+- &CS3XY
+  courseNumber: "CS3XY"
+  courseTitle: "Elective Placeholder 2: requires CS121 and CS222"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: 
+    - *CS121
+    - *CS222
+- &CS327
+  courseNumber: "CS327"
+  courseTitle: "Distributed Processing and Networks"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *CS224
+- &CS335
+  courseNumber: "CS335"
+  courseTitle: "Programming Languages"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: 
+    - *CS222
+    - *CS230
+- &CS346
+  courseNumber: "CS346"
+  courseTitle: "Database Design"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *CS222
+- &CS376
+  courseNumber: "CS376"
+  courseTitle: "Operating Systems"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: 
+    - *CS222
+    - *CS230
+- &CS380
+  courseNumber: "CS380"
+  courseTitle: "Theory of Computation 1"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: 
+    - *CS224
+- &CS4XX
+  courseNumber: "CS4XX"
+  courseTitle: "Elective Placeholder 3"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: 
+    - *CS121
+    - *CS222
+- &CS4XY
+  courseNumber: "CS4XY"
+  courseTitle: "Elective Placeholder 4"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *CS121
+    - *CS222
+- &CS495
+  courseNumber: "CS495"
+  courseTitle: "Software Engineering 1"
+  creditHours: 3
+  fall: true
+  spring: false
+  prerequisites:
+    - *CS222
+    - *COMM210
+- &CS498
+  courseNumber: "Software Engineering 2"
+  creditHours: 3
+  fall: false
+  spring: true
+  prerequisites: 
+    - *CS495
