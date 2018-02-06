@@ -118,7 +118,7 @@ namespace AgorithmTestProject
         static void buildSemesterList()
         {
             //Assign according to user input
-            int semestersToGo = 5;
+            int semestersToGo = 1;
             int totalCreditsToGo = findTotalCredits();
             int targetHours = totalCreditsToGo / semestersToGo;
             List<Course> classList = new List<Course>();
@@ -133,7 +133,7 @@ namespace AgorithmTestProject
 
                 while (currentSemester.totalCreditHours < targetHours && currentClassIndex < globalVars.remainingCourseList.Count)
                 {
-                    if (clearsChecks(globalVars.remainingCourseList[currentClassIndex]))
+                    if (clearsChecks(currentSemester, globalVars.remainingCourseList[currentClassIndex]))
                     {
                         classList.Add(globalVars.remainingCourseList[currentClassIndex]);
                         currentSemester.totalCreditHours += globalVars.remainingCourseList[currentClassIndex].creditHours;
@@ -169,9 +169,12 @@ namespace AgorithmTestProject
             return creditCounter;
         }
 
-        static bool clearsChecks(Course currentCourse)
+        static bool clearsChecks(Semester currentSemester, Course currentCourse)
         {
-            //fill with checks
+            if(currentCourse.creditHours + currentSemester.totalCreditHours > 18)
+            {
+                return false;
+            }
             return true;
         }
 
