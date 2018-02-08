@@ -12,8 +12,10 @@ namespace AgorithmTestProject
 
         public int position { get; set; }
 
-        public Course[] classes { get; set; }
+        public List<Course> classes { get; set; }
 
         public int totalCreditHours { get; internal set; }
+
+        public bool isFall { get; internal set; }
     }
 }
