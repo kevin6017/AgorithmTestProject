@@ -5,13 +5,45 @@
   fall: true
   spring: true
   prerequisites: null
-- &BasicMath
-  courseNumber: "BasicMath"
-  courseTitle: "Math 111, Math 112, Math 132, Math 136, Math 161, Math 165"
+- &MATH108
+  courseNumber: "MATH108"
+  courseTitle: "Intermediate Algebra"
   creditHours: 3
   fall: true
   spring: true
   prerequisites: null
+- &MATH111
+  courseNumber: "MATH111"
+  courseTitle: "Second Level Math Class that I dont know the title of"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH108
+- &MATH112
+  courseNumber: "MATH112"
+  courseTitle: "Second Level Math Class that I dont know the title of"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH111
+- &MATH161
+  courseNumber: "MATH161"
+  courseTitle: "Calculus 1"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH112
+- &MATH162
+  courseNumber: "MATH162"
+  courseTitle: "Calculus 2"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH161
 - &CS120
   courseNumber: "CS120"
   courseTitle: "Computer Science 1"
@@ -19,7 +51,7 @@
   fall: true
   spring: true
   prerequisites:
-    - *BasicMath
+    - *MATH108
 - &DiscreteMath
   courseNumber: "DiscreteMath"
   courseTitle: "CS124 or Math 215"
