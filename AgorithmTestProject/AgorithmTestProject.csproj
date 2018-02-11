@@ -61,6 +61,7 @@
     <None Include="App.config" />
     <None Include="CSclasses.eyaml" />
     <None Include="CSclasses.json" />
+    <None Include="HonorsCoreClasses.eyaml" />
     <None Include="HonorsCoreClasses.json" />
     <None Include="packages.config" />
     <None Include="SampleSchedule.json" />

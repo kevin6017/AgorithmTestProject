@@ -1,0 +1,120 @@
+- &ENG103
+  courseNumber: "ENG103"
+  courseTitle: "Rhetoric and Writing"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &ENG104
+  courseNumber: "ENG104"
+  courseTitle: "Composing Research"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *ENG103
+- &HIST150
+  courseNumber: "HIST150"
+  courseTitle: "The West in the World"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &FIN101
+  courseNumber: "FIN101"
+  courseTitle: "Personal Finance for Fiscal Wellness"
+  creditHours: 1
+  fall: true
+  spring: true
+  prerequisites: null
+- &PFW
+  courseNumber: "PFW"
+  courseTitle: "Physical Fitness/Wellness credit"
+  creditHours: 2
+  fall: true
+  spring: true
+  prerequisites: null
+- &FineArts
+  courseNumber: "Music/Art history"
+  courseTitle: "Fine arts credit"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &NatSci
+  courseNumber: "NatSci"
+  courseTitle: "Natural Sciences Credit"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &HONR100
+  courseNumber: "HONR100"
+  courseTitle: "Freshman Seminar"
+  creditHours: 1
+  fall: true
+  spring: true
+  prerequisites: null
+- &HONR189
+  courseNumber: "HONR189"
+  courseTitle: "Inquiries in Global Studies"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &HONR199
+  courseNumber: "HONR199"
+  courseTitle: "Contemporary American Civilization"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &HONR201
+  courseNumber: "HONR201"
+  courseTitle: "Inquiries in the Ancient World"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &HONR202
+  courseNumber: "HONR202"
+  courseTitle: "Middle Ages Renaissance Enlightenment"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &HONR203
+  courseNumber: "HONR203"
+  courseTitle: "Inquiries into 19th, 20th, and 21st Centuries"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &HONR39X
+  courseNumber: "HONR39X"
+  courseTitle: "Honors Colloquium"
+  creditHours: 3
+  fall: true
+  spring: false
+  prerequisites: null
+- &HONR39Y
+  courseNumber: "HONR39Y"
+  courseTitle: "Honors Colloquium"
+  creditHours: 3
+  fall: false
+  spring: true
+  prerequisites: null
+- &HONR29X
+  courseNumber: "HONR29X"
+  courseTitle: "Natural Science Honors Course"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &HONR499
+  courseNumber: "HONR499"
+  courseTitle: "Senior Honors Project"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
