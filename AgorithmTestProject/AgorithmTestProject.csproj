@@ -65,6 +65,7 @@
     <None Include="HonorsCoreClasses.json" />
     <None Include="packages.config" />
     <None Include="SampleSchedule.json" />
+    <None Include="UniversityCoreClasses.eyaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,89 @@
+- &ENG103
+  courseNumber: "ENG103"
+  courseTitle: "Rhetoric and Writing"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &ENG104
+  courseNumber: "ENG104"
+  courseTitle: "Composing Research"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *ENG103
+- &HIST150
+  courseNumber: "HIST150"
+  courseTitle: "The West in the World"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &PFW
+  courseNumber: "PFW"
+  courseTitle: "Physical Fitness and Wellness"
+  creditHours: 2
+  fall: true
+  spring: true
+  prerequisites: null
+- &FIN101
+  courseNumber: "FIN101"
+  courseTitle: "Personal Finance"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &T1FINEART
+  courseNumber: "T1FINEART"
+  courseTitle: "Tier 1 Fine Arts"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &T1HUMAN
+  courseNumber: "T1HUMANITIES"
+  courseTitle: "Tier 1 Humanities"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &T1NATSCI
+  courseNumber: "T1NATURALSCI"
+  courseTitle: "Tier 1 Natural Science"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &T1SOCSCI
+  courseNumber: "T1SOCIALSCI"
+  courseTitle: "Tier 1 Social Science"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &T2FINEART
+  courseNumber: "T2FINEART"
+  courseTitle: "Tier 2 Fine Arts"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: 
+    - *T1FINEART
+- &T2NATSCI
+  courseNumber: "T2NATURALSCI"
+  courseTitle: "Tier 2 Natural Science"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *T1NATSCI
+- &T3CAPSTONE
+  courseNumber: "T3CAPSTONE"
+  courseTitle: "Tier 3 Writing Emphasis Course"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *T2NATSCI
+    - *T2FINEART

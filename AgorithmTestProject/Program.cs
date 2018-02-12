@@ -27,15 +27,16 @@ namespace AgorithmTestProject
         static void Main(string[] args)
         {
             var ds = new DeserializerBuilder().WithNamingConvention(new CamelCaseNamingConvention()).Build();
-            globalVars.remainingCourseList = ds.Deserialize<List<Course>>(File.OpenText("..\\..\\HonorsCoreClasses.eyaml"));
-            globalVars.remainingCourseList.AddRange(ds.Deserialize<List<Course>>(File.OpenText("..\\..\\HonorsCoreClasses.eyaml")));
+            globalVars.remainingCourseList = ds.Deserialize<List<Course>>(File.OpenText("..\\..\\CSclasses.eyaml"));
+            globalVars.remainingCourseList.AddRange(ds.Deserialize<List<Course>>(File.OpenText("..\\..\\UniversityCoreClasses.eyaml")));
             globalVars.prSet = new HashSet<Course>();
             initializePriorities();
             buildPrereqList();
             prioritizeCourses();
             assignClassDependencyNum();
             buildSemesterList();
-            testSemesterArray(globalVars.semesterList);
+            //testSemesterArray(globalVars.semesterList);
+            printSemesters();
         }
 
         static void testArrayForGlobalVars(List<Course> list)
@@ -203,6 +204,20 @@ namespace AgorithmTestProject
             //+ "  Course Title: " + currentCourse.courseTitle 
             string output = "Course Number: " + currentCourse.courseNumber + "  Priority: " + currentCourse.priority[0] + " Single Semester Offering: " + currentCourse.priority[1] + "# of Courses w/ Dependency: " + currentCourse.priority[2] + " Credit Hours: " + currentCourse.creditHours;
             Console.WriteLine(output);
+        }
+
+        static void printSemesters()
+        {
+            int counter = 0;
+            foreach(Semester sem in globalVars.semesterList)
+            {
+                Console.WriteLine("Semester: " + counter + ",  Total Credits: " + sem.totalCreditHours);
+                foreach(Course course in sem.classes)
+                {
+                    printClassInfo(course);
+                }
+                counter++; 
+            }
         }
 
         public class SortClasses : Comparer<Course>
