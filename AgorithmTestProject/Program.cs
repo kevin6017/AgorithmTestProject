@@ -27,7 +27,7 @@ namespace AgorithmTestProject
         static void Main(string[] args)
         {
             var ds = new DeserializerBuilder().WithNamingConvention(new CamelCaseNamingConvention()).Build();
-            globalVars.remainingCourseList = ds.Deserialize<List<Course>>(File.OpenText("..\\..\\CSclasses.eyaml"));
+            globalVars.remainingCourseList = ds.Deserialize<List<Course>>(File.OpenText("..\\..\\MathSci.eyaml"));
             globalVars.remainingCourseList.AddRange(ds.Deserialize<List<Course>>(File.OpenText("..\\..\\UniversityCoreClasses.eyaml")));
             globalVars.prSet = new HashSet<Course>();
             initializePriorities();

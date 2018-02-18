@@ -1,0 +1,159 @@
+- &MATH108
+  courseNumber: "MATH108"
+  courseTitle: "Intermediate Algebra"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites: null
+- &MATH111
+  courseNumber: "MATH111"
+  courseTitle: "Second Level Math Class that I dont know the title of"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH108
+- &MATH112
+  courseNumber: "MATH112"
+  courseTitle: "Second Level Math Class that I dont know the title of"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH111
+- &MATH165
+  courseNumber: "MATH165"
+  courseTitle: "Calculus 1"
+  creditHours: 4
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH111
+    - *MATH112
+- &MATH166
+  courseNumber: "MATH166"
+  courseTitle: "Calculus 2"
+  creditHours: 4
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH165
+- &MATH215
+  courseNumber: "MATH215"
+  courseTitle: "Discrete Systems"
+  creditHours: 4
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH165
+- &MATH217
+  courseNumber: "MATH217"
+  courseTitle: "Linear Algebra"
+  creditHours: 4
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH165
+- &MATH259
+  courseNumber: "MATH259"
+  courseTitle: "Intro to Mathematical Software"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH215
+- &MATH267
+  courseNumber: "MATH267"
+  courseTitle: "Calculus 3"
+  creditHours: 4
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH166
+- &MATH320
+  courseNumber: "MATH320"
+  courseTitle: "Probability"
+  creditHours: 4
+  fall: true
+  spring: false
+  prerequisites:
+    - *MATH166
+    - *MATH215
+- &MATH374
+  courseNumber: "MATH374"
+  courseTitle: "Differential Equations"
+  creditHours: 3
+  fall: true
+  spring: false
+  prerequisites:
+    - *MATH166
+- &MATH411
+  courseNumber: "MATH411"
+  courseTitle: "Abstract Algebra 1"
+  creditHours: 3
+  fall: true
+  spring: false
+  prerequisites:
+    - *MATH215
+    - *MATH217
+- &MATH471
+  courseNumber: "MATH471"
+  courseTitle: "Real Analysis 1"
+  creditHours: 4
+  fall: true
+  spring: false
+  prerequisites:
+    - *MATH215
+    - *MATH267
+- &MATH498
+  courseNumber: "MATH498"
+  courseTitle: "Senior Seminar"
+  creditHours: 2
+  fall: false
+  spring: true
+  prerequisites: null
+- &MATH412
+  courseNumber: "MATH412"
+  courseTitle: "Abstract Algebra 2"
+  creditHours: 3
+  fall: false
+  spring: true
+  prerequisites:
+    - *MATH411
+- &MATH472
+  courseNumber: "MATH472"
+  courseTitle: "Real Analysis 2"
+  creditHours: 3
+  fall: false
+  spring: true
+  prerequisites:
+    - *MATH471
+- &MATH4XX
+  courseNumber: "MATH4XX"
+  courseTitle: "MATH elective  w/ MATH 215 prereq"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH215
+- &MATH4XY
+  courseNumber: "MATH4XY"
+  courseTitle: "MATH elective  w/ MATH 217 & 267 prereqs"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH217
+    - *MATH267
+- &MATH4XZ
+  courseNumber: "MATH4XZ"
+  courseTitle: "3rd MATH elective  w/ MATH 217 & 267 prereqs"
+  creditHours: 3
+  fall: true
+  spring: true
+  prerequisites:
+    - *MATH217
+    - *MATH267
+
+
+

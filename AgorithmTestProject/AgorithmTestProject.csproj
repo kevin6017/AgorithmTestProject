@@ -63,6 +63,7 @@
     <None Include="CSclasses.json" />
     <None Include="HonorsCoreClasses.eyaml" />
     <None Include="HonorsCoreClasses.json" />
+    <None Include="MathSci.eyaml" />
     <None Include="packages.config" />
     <None Include="SampleSchedule.json" />
     <None Include="UniversityCoreClasses.eyaml" />
