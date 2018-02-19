@@ -189,7 +189,8 @@
     - *CS222
     - *COMM210
 - &CS498
-  courseNumber: "Software Engineering 2"
+  courseNumber: "CS498"
+  courseTitle: "Software Engineering 2"
   creditHours: 3
   fall: false
   spring: true
