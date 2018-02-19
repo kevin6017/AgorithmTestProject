@@ -27,7 +27,7 @@ namespace AgorithmTestProject
         static void Main(string[] args)
         {
             var ds = new DeserializerBuilder().WithNamingConvention(new CamelCaseNamingConvention()).Build();
-            globalVars.remainingCourseList = ds.Deserialize<List<Course>>(File.OpenText("..\\..\\MathSci.eyaml"));
+            globalVars.remainingCourseList = ds.Deserialize<List<Course>>(File.OpenText("..\\..\\CSclasses.eyaml"));
             globalVars.remainingCourseList.AddRange(ds.Deserialize<List<Course>>(File.OpenText("..\\..\\UniversityCoreClasses.eyaml")));
             globalVars.prSet = new HashSet<Course>();
             initializePriorities();
@@ -120,7 +120,7 @@ namespace AgorithmTestProject
         static void buildSemesterList()
         {
             //Assign according to user input
-            int semestersToGo = 1;
+            int semestersToGo = 8;
             bool isFallTracker = true;
 
             int totalCreditsToGo = findTotalCredits();
