@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Course.cs" />
+    <Compile Include="Curriculum.cs" />
     <Compile Include="JsonLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +64,7 @@
     <None Include="CSclasses.json" />
     <None Include="HonorsCoreClasses.eyaml" />
     <None Include="HonorsCoreClasses.json" />
+    <None Include="MasterCourseList.eyaml" />
     <None Include="MathSci.eyaml" />
     <None Include="packages.config" />
     <None Include="SampleSchedule.json" />

@@ -1,0 +1,508 @@
+- &UCCourses
+  - &ENG103
+    courseNumber: "ENG103"
+    courseTitle: "Rhetoric and Writing"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &ENG104
+      courseNumber: "ENG104"
+      courseTitle: "Composing Research"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites:
+        - *ENG103
+  - &HIST150
+      courseNumber: "HIST150"
+      courseTitle: "The West in the World"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites: null
+  - &PFW
+      courseNumber: "PFW"
+      courseTitle: "Physical Fitness and Wellness"
+      creditHours: 2
+      fall: true
+      spring: true
+      prerequisites: null
+  - &COMM210
+    courseNumber: "COMM210"
+    courseTitle: "Fundamentals of Public Communication"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null    
+  - &FIN101
+      courseNumber: "FIN101"
+      courseTitle: "Personal Finance"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites: null
+  - &T1FINEART
+      courseNumber: "T1FINEART"
+      courseTitle: "Tier 1 Fine Arts"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites: null
+  - &T1HUMAN
+      courseNumber: "T1HUMANITIES"
+      courseTitle: "Tier 1 Humanities"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites: null
+  - &T1NATSCI
+      courseNumber: "T1NATURALSCI"
+      courseTitle: "Tier 1 Natural Science"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites: null
+  - &T1SOCSCI
+      courseNumber: "T1SOCIALSCI"
+      courseTitle: "Tier 1 Social Science"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites: null
+  - &T2FINEART
+      courseNumber: "T2FINEART"
+      courseTitle: "Tier 2 Fine Arts"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites: 
+        - *T1FINEART
+  - &T2NATSCI
+      courseNumber: "T2NATURALSCI"
+      courseTitle: "Tier 2 Natural Science"
+      creditHours: 3
+      fall: true
+      spring: true
+      prerequisites:
+        - *T1NATSCI
+  - &T3CAPSTONE
+    courseNumber: "T3CAPSTONE"
+    courseTitle: "Tier 3 Writing Emphasis Course"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *T2NATSCI
+      - *T2FINEART
+
+- &HonorsCoreClasses
+  - *ENG103
+  - *ENG104
+  - *HIST150
+  - *FIN101
+  - *PFW
+  - *T1FINEART
+  - *T1NATSCI
+  - &HONR100
+    courseNumber: "HONR100"
+    courseTitle: "Freshman Seminar"
+    creditHours: 1
+    fall: true
+    spring: true
+    prerequisites: null
+  - &HONR189
+    courseNumber: "HONR189"
+    courseTitle: "Inquiries in Global Studies"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &HONR199
+    courseNumber: "HONR199"
+    courseTitle: "Contemporary American Civilization"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &HONR201
+    courseNumber: "HONR201"
+    courseTitle: "Inquiries in the Ancient World"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &HONR202
+    courseNumber: "HONR202"
+    courseTitle: "Middle Ages Renaissance Enlightenment"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &HONR203
+    courseNumber: "HONR203"
+    courseTitle: "Inquiries into 19th, 20th, and 21st Centuries"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &HONR39X
+    courseNumber: "HONR39X"
+    courseTitle: "Honors Colloquium"
+    creditHours: 3
+    fall: true
+    spring: false
+    prerequisites: null
+  - &HONR39Y
+    courseNumber: "HONR39Y"
+    courseTitle: "Honors Colloquium"
+    creditHours: 3
+    fall: false
+    spring: true
+    prerequisites: null
+  - &HONR29X
+    courseNumber: "HONR29X"
+    courseTitle: "Natural Science Honors Course"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &HONR499
+    courseNumber: "HONR499"
+    courseTitle: "Senior Honors Project"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+
+- &MathCourses
+  - &MATH108
+    courseNumber: "MATH108"
+    courseTitle: "Intermediate Algebra"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &MATH111
+    courseNumber: "MATH111"
+    courseTitle: "Second Level Math Class that I dont know the title of"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH108
+  - &MATH112
+    courseNumber: "MATH112"
+    courseTitle: "Second Level Math Class that I dont know the title of"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH111
+  - &MATH165
+    courseNumber: "MATH165"
+    courseTitle: "Calculus 1"
+    creditHours: 4
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH111
+      - *MATH112
+  - &MATH166
+    courseNumber: "MATH166"
+    courseTitle: "Calculus 2"
+    creditHours: 4
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH165
+  - &MATH215
+    courseNumber: "MATH215"
+    courseTitle: "Discrete Systems"
+    creditHours: 4
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH165
+  - &MATH217
+    courseNumber: "MATH217"
+    courseTitle: "Linear Algebra"
+    creditHours: 4
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH165
+  - &MATH259
+    courseNumber: "MATH259"
+    courseTitle: "Intro to Mathematical Software"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH215
+  - &MATH267
+    courseNumber: "MATH267"
+    courseTitle: "Calculus 3"
+    creditHours: 4
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH166
+  - &MATH320
+    courseNumber: "MATH320"
+    courseTitle: "Probability"
+    creditHours: 4
+    fall: true
+    spring: false
+    prerequisites:
+      - *MATH166
+      - *MATH215
+  - &MATH374
+    courseNumber: "MATH374"
+    courseTitle: "Differential Equations"
+    creditHours: 3
+    fall: true
+    spring: false
+    prerequisites:
+      - *MATH166
+  - &MATH411
+    courseNumber: "MATH411"
+    courseTitle: "Abstract Algebra 1"
+    creditHours: 3
+    fall: true
+    spring: false
+    prerequisites:
+      - *MATH215
+      - *MATH217
+  - &MATH471
+    courseNumber: "MATH471"
+    courseTitle: "Real Analysis 1"
+    creditHours: 4
+    fall: true
+    spring: false
+    prerequisites:
+      - *MATH215
+      - *MATH267
+  - &MATH498
+    courseNumber: "MATH498"
+    courseTitle: "Senior Seminar"
+    creditHours: 2
+    fall: false
+    spring: true
+    prerequisites: null
+  - &MATH412
+    courseNumber: "MATH412"
+    courseTitle: "Abstract Algebra 2"
+    creditHours: 3
+    fall: false
+    spring: true
+    prerequisites:
+      - *MATH411
+  - &MATH472
+    courseNumber: "MATH472"
+    courseTitle: "Real Analysis 2"
+    creditHours: 3
+    fall: false
+    spring: true
+    prerequisites:
+      - *MATH471
+  - &MATH4XX
+    courseNumber: "MATH4XX"
+    courseTitle: "MATH elective  w/ MATH 215 prereq"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH215
+  - &MATH4XY
+    courseNumber: "MATH4XY"
+    courseTitle: "MATH elective  w/ MATH 217 & 267 prereqs"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH217
+      - *MATH267
+  - &MATH4XZ
+    courseNumber: "MATH4XZ"
+    courseTitle: "3rd MATH elective  w/ MATH 217 & 267 prereqs"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH217
+      - *MATH267
+
+- &CSCourses 
+  - *COMM210
+  - *MATH108
+  - *MATH111
+  - *MATH112
+  - &MATH161
+    courseNumber: "MATH161"
+    courseTitle: "Calculus 1"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH112
+  - &MATH162
+    courseNumber: "MATH162"
+    courseTitle: "Calculus 2"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH161
+  - &CS120
+    courseNumber: "CS120"
+    courseTitle: "Computer Science 1"
+    creditHours: 4
+    fall: true
+    spring: true
+    prerequisites:
+      - *MATH108
+  - &DiscreteMath
+    courseNumber: "DiscreteMath"
+    courseTitle: "CS124 or Math 215"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: null
+  - &CS121
+    courseNumber: "CS121"
+    courseTitle: "Computer Science 2"
+    creditHours: 4
+    fall: true
+    spring: true
+    prerequisites:
+      - *CS120
+  - &CS222
+    courseNumber: "CS222"
+    courseTitle: "Advanced Programming"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *CS121
+      - *DiscreteMath
+  - &CS224
+    courseNumber: "CS224"
+    courseTitle: "Design/Analysis of Algorithms"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *CS121
+      - *DiscreteMath
+  - &CS230
+    courseNumber: "CS230"
+    courseTitle: "Computer Organization and Architecture"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: 
+      - *CS121
+      - *DiscreteMath
+  - &CS239
+    courseNumber: "CS239"
+    courseTitle: "Social and Professional Issues"
+    creditHours: 1
+    fall: true
+    spring: true
+    prerequisites:
+      - *CS222
+  - &CS3XX
+    courseNumber: "CS3XX"
+    courseTitle: "Elective Placeholder 1: requires CS121"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: 
+      - *CS121
+  - &CS3XY
+    courseNumber: "CS3XY"
+    courseTitle: "Elective Placeholder 2: requires CS121 and CS222"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: 
+      - *CS121
+      - *CS222
+  - &CS327
+    courseNumber: "CS327"
+    courseTitle: "Distributed Processing and Networks"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *CS224
+  - &CS335
+    courseNumber: "CS335"
+    courseTitle: "Programming Languages"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: 
+      - *CS222
+      - *CS230
+  - &CS346
+    courseNumber: "CS346"
+    courseTitle: "Database Design"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *CS222
+  - &CS376
+    courseNumber: "CS376"
+    courseTitle: "Operating Systems"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: 
+      - *CS222
+      - *CS230
+  - &CS380
+    courseNumber: "CS380"
+    courseTitle: "Theory of Computation 1"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: 
+      - *CS224
+  - &CS4XX
+    courseNumber: "CS4XX"
+    courseTitle: "Elective Placeholder 3"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites: 
+      - *CS121
+      - *CS222
+  - &CS4XY
+    courseNumber: "CS4XY"
+    courseTitle: "Elective Placeholder 4"
+    creditHours: 3
+    fall: true
+    spring: true
+    prerequisites:
+      - *CS121
+      - *CS222
+  - &CS495
+    courseNumber: "CS495"
+    courseTitle: "Software Engineering 1"
+    creditHours: 3
+    fall: true
+    spring: false
+    prerequisites:
+      - *CS222
+      - *COMM210
+  - &CS498
+    courseNumber: "CS498"
+    courseTitle: "Software Engineering 2"
+    creditHours: 3
+    fall: false
+    spring: true
+    prerequisites: 
+    - *CS495
